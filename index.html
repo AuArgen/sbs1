@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding:10px;
+            outline: 2px solid teal;
+            user-select: none;
+        }
+        input {
+            margin-top: 10px;
+            border: none;
+            border-bottom: 2px solid gray;
+            padding-bottom: 10px;
+        }
+
+        input::placeholder {
+            color: aqua;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        a:active {
+            color: aqua;
+        }
+
+        a:-webkit-any-link {
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias saepe vitae corrupti maxime quaerat cupiditate aliquid quibusdam consequuntur vero beatae fugiat culpa, illum distinctio exercitationem inventore natus in! Eveniet, numquam!
+    </div>
+
+    <input type="text" placeholder="Search...">
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://instagram.com">Instagram</a>
+</body>
+</html>

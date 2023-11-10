@@ -1,0 +1,47 @@
+body {
+    background: #eee;
+}
+a {
+    text-decoration: none;
+    padding: 10px 50px;
+    border-left: 1px solid gray;
+    background: white;
+    margin: 10px;
+    display: inline-block;
+}
+a:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.314);
+    transition: 0.3s;
+}
+.text-center {
+    text-align: center;
+}
+.text-center:hover {
+    color: aqua;
+}
+.text-one {
+    color:rgb(0, 13, 255); 
+    background: white; 
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.301);
+}
+.text-two {
+    background: black;
+    color:white;
+}
+.text-three {
+    border: 1px dashed black;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.868), 
+    1px 1px 10px rgba(236, 14, 14, 0.668);
+}
+
+#hello {
+    border-radius: 100px 0px 100px 0px;
+}
+
+#hello2 {
+    border-radius: 0px 100px 0px 100px;
+    padding: 0px 100px;
+}

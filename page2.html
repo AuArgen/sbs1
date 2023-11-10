@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #imagePreview {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .image-container {
+            margin: 5px;
+            position: relative;
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html">Home</a>
+<input type="file" id="imageInput" multiple>
+<div id="imagePreview"></div>
+
+<script>
+    const imageInput = document.getElementById('imageInput');
+    const imagePreview = document.getElementById('imagePreview');
+
+    imageInput.addEventListener('change', function () {
+        imagePreview.innerHTML = ''; // Clear the preview div
+
+        for (let i = 0; i < imageInput.files.length; i++) {
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('image-container');
+
+            const deleteButton = document.createElement('span');
+            deleteButton.classList.add('delete-button');
+            deleteButton.innerHTML = 'X';
+
+            const image = document.createElement('img');
+            image.src = URL.createObjectURL(imageInput.files[i]);
+            image.style.maxWidth = '100px';
+            image.style.maxHeight = '100px';
+
+            deleteButton.addEventListener('click', function () {
+                imagePreview.removeChild(imageDiv);
+                const files = Array.from(imageInput.files);
+                imageInput.value = '';
+                const dataTransfer = new DataTransfer();
+                for (let j = 0; j < files.length; j++) {
+                    let file = files[j];
+                    if (j !== i) dataTransfer.items.add(file);
+                }
+                imageInput.files = dataTransfer.files;
+            });
+
+            imageDiv.appendChild(deleteButton);
+            imageDiv.appendChild(image);
+            imagePreview.appendChild(imageDiv);
+        }
+    });
+</script>
+</body>
+</html>
