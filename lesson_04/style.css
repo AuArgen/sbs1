@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Vina Sans', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    width: calc(100% - 200px);
+    height: 50px;
+    background: turquoise;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url(../img/WhatsApp\ Image\ 2023-11-19\ at\ 20.05.25.jpeg) no-repeat;
+    background-size: cover;
+}
+
+header ul {
+    display: flex;
+    gap:30px;
+}
+
+header ul li {
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+header ul li:hover {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header ul li.cart-li {
+    position: relative;
+}
+
+header ul li.cart-li span {
+    position: absolute;
+    left: 5px;
+    top: -8px;
+    font-size: 14px;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 100px;
+}
+
+main .block {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    width: 320px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+main .block .img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #eee;
+    overflow: hidden;
+}
+
+main .block .img img {
+    width: 256px;
+    height: 370px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+main .block .img img:hover {
+    transform: scale(1.1);
+}
+
+main .block .img i {
+    position: absolute;
+    top: 20px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+main .block .img i.fa-heart {
+    left: 6px;
+    transition: all 500ms ease;
+}
+
+main .block .img i.fa-heart:hover {
+    color: red;
+    transform: scale(1.3);
+    text-shadow: none;
+}
+
+main .block .img i.fa-star {
+    right: 6px;
+    transition: all 500ms ease;
+
+}
+
+main .block .img i.fa-star:hover {
+    color: rgb(245, 211, 23);
+    transform: scale(1.3);
+    text-shadow: none;
+}
+
+main .block h4 {
+    text-align: center;
+    padding: 20px;
+}

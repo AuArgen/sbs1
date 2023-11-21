@@ -4,24 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            width: calc(210px*4);
+            height: calc(297px*4);
+            background: url(./img/WhatsApp\ Image\ 2023-11-19\ at\ 20.05.25.jpeg) no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .container>* {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .container::after {
+            content: '';
+            width: 96%;
+            height: 98%;
+            position: absolute;
+            background: rgba(253, 253, 253, 0.6);
+            left: 2%;
+            top: 1%;
+            z-index: 1;
+        }
+
+        .row {
+            width: 88.9%;
+            margin: 1% 2%;
+        }
+
+        .container header {
+            padding: 1% 4%;
+            width: 100%;
+            /* text-align: center; */
+            font-size: 50px;
+            color: #fff ;
+            background: red;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .container .row nav {
+            width: 99.5%;
+            text-align: center;
+            display: block;
+            font-size: 22px;
+            padding: 2rem;
+        }
+        .container .row .text1 {
+            width: 99.5%;
+            padding: 1rem 2rem;
+            font-size: 22px;
+            text-align: center;
+            background: red;
+            color: #fff;
+        }
+        .container .row .block {
+            width: 99.5%;
+            padding: 1rem 2rem;
+            font-size: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .container .row .block .blocks {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .container .row .block .blocks .block-left {
+            width: 50%;
+        }
+
+        .container .row .block .blocks .block-right {
+            width: 50%;
+            background: #fff;
+        }
+
+        .container .row .block .blocks .theme {
+            width: 100%;
+            background: red;
+            color: #fff;
+            padding: 1rem;
+            margin-bottom: 1px;
+            text-align: center;
+        }
+
+        .container .row .block .blocks .block-left img {
+            width: 100%;
+            height: 221px;
+        }
+
+        .container .row .block .blocks .block-right .bg-red {
+            background: red;
+            text-align: center;
+            width: 99%;
+            margin-left: 1.1%;
+            color: #fff;
+        } 
+        .container .row .block .blocks .block-right .bg-white {
+            background: white;
+            text-align: center;
+            width: 99%;
+            margin-left: 1.1%;
+        } 
+
+        .container .row .block .blocks .block-right .text-blue{
+            color: rgb(18, 51, 235);
+            text-align: left;
+            padding-left: 2px;
+            border-top: 1px solid red;
+
+        }
+        .container .row .block .blocks .block-right .text-red{
+            color: red;
+            text-align: right;
+            padding-right: 2px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="row">
-                    <div class="col-3 border">
-                        <img w-100 src="https://goods-photos.static1-sima-land.com/items/365829/0/700.jpg?v=0" alt="globus">
-                        <h3>ВикипедиЯ</h3>
-                        <span>слободьно</span>
-                        <a href="#">Заглавная страница</a>
+            <header>
+                <div class="text">
+                    КИТЕП ОКУУ
+                    <br> СЫНАГЫ
+                </div>
+                <img src="./img/logo.jpg" alt="">
+            </header>
+            <nav>
+                Урматтуу окуучулар сизерди  №89 Б. Абдрахманова
+                атындагы орто мектебинде 12-декабрь күнү боло
+                турган китеп окуу сынагына чакырабыз! 
+            </nav>
+            <div class="text1">
+                Сынак төмөнкү китептердин негизинде өткөрүлөт:
+            </div>
+            <div class="block">
+                <div class="blocks">
+                    <div class="theme">Сынган кылыч</div>
+                    <div class="block-left">
+                        <img src="./img/сынган кылыч.jpg" alt="">
                     </div>
+                    <div class="block-right">
+                            <div class="bg-red">БЕЛЕКТЕР</div>
+                            <div class="bg-white">
+                                <div class="text-blue">1-орун</div>
+                                <div class="text-red"> Телефон</div>
+                                <div class="text-blue">2-орун</div>
+                                <div class="text-red"> 2000 сом</div>
+                                <div class="text-blue">3-орун</div>
+                                <div class="text-red"> 1000 сом</div>
+                            </div>
+                    </div>
+                </div>
 
+                <div class="blocks">
+                    <div class="theme">Тоолор кулаганда</div>
+                    <div class="block-left">
+                        <img src="./img/тоолор кулаганда.png" alt="">
+                    </div>
+                    <div class="block-right">
+                            <div class="bg-red">БЕЛЕКТЕР</div>
+                            <div class="bg-white">
+                                <div class="text-blue">1-орун</div>
+                                <div class="text-red"> Телефон</div>
+                                <div class="text-blue">2-орун</div>
+                                <div class="text-red"> 2000 сом</div>
+                                <div class="text-blue">3-орун</div>
+                                <div class="text-red"> 1000 сом</div>
+                            </div>
+                    </div>
+                </div>
 
-                    <div class="col-9">
+                <div class="blocks">
+                    <div class="theme">Саманчынын жолу</div>
+                    <div class="block-left">
+                        <img src="./img/саманчынын жолу.jpg" alt="">
+                    </div>
+                    <div class="block-right">
+                            <div class="bg-red">БЕЛЕКТЕР</div>
+                            <div class="bg-white">
+                                <div class="text-blue">1-орун</div>
+                                <div class="text-red"> 3000 сом</div>
+                                <div class="text-blue">2-орун</div>
+                                <div class="text-red"> 2500 сом</div>
+                                <div class="text-blue">3-орун</div>
+                                <div class="text-red"> 1500 сом</div>
+                            </div>
+                    </div>
+                </div>
 
+                <div class="blocks">
+                    <div class="theme">Каныбек</div>
+                    <div class="block-left">
+                        <img src="./img/каныбек.png" alt="">
+                    </div>
+                    <div class="block-right">
+                            <div class="bg-red">БЕЛЕКТЕР</div>
+                            <div class="bg-white">
+                                <div class="text-blue">1-орун</div>
+                                <div class="text-red"> 3000 сом</div>
+                                <div class="text-blue">2-орун</div>
+                                <div class="text-red"> 2500 сом</div>
+                                <div class="text-blue">3-орун</div>
+                                <div class="text-red"> 1500 сом</div>
+                            </div>
                     </div>
                 </div>
             </div>
