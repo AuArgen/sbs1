@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+header {
+    height: 60px;
+    box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+}
+
+header .icons {
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+header .icons div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+header .icons div i {
+    font-size: 1.5rem;
+    animation: icons 4s infinite;
+}
+
+header .icons div:nth-child(1) {
+    background: rgb(15, 182, 228);
+}
+
+header .icons div:nth-child(2) {
+    background: rgb(10, 185, 36);
+}
+
+header .icons div:nth-child(3) {
+    background: linear-gradient(20deg, rgb(186, 230, 10), rgb(227, 3, 149), rgb(227, 3, 149));
+}
+
+@keyframes icons {
+    0% {
+        transform: rotateY(0deg);
+    }
+    70% {
+        transform: rotateY(360deg);
+    }
+    71% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.container .slider {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.container .slider .slide:nth-child(1) {
+    animation: slide 10s infinite;
+}
+
+.container .slider .slide {
+    min-width: 100%;
+}
+
+.container .slider .slide .img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.container .slider .slide .img img{
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+}
+
+.container .slider .slide .img p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.container .slider .slide .img p span {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    animation: load 1s infinite;
+}
+
+.container .slider .slide .img p span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 110%;
+    animation: load 2s infinite;
+}
+
+.container .slider .slide .img p span::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 220%;
+    animation: load 3s infinite;
+}
+
+@keyframes load {
+    0% {
+        background: white;
+    }
+    50% {
+        background: white;
+    }
+    100% {
+        background: black;
+        
+    }
+}
+
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 0%;
+    }
+    33% {
+        margin-left: -100%;
+    }
+    55% {
+        margin-left: -100%;
+    }
+    66% {
+        margin-left: -200%;
+    }
+    99.9% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+
+
+@media(max-width:1300px) {
+    .container {
+        width: 991px;
+    }
+    header {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width:991px) {
+    .container {
+        width: 778px;
+    }
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width:778px) {
+    .container {
+        width: 90%;
+    }
+
+    .container .slider .slide .img{
+        height: 240px;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        padding: 0 10px;
+        flex-direction: column;
+        min-height: 80px;
+    }
+}
