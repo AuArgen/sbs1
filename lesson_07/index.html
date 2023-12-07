@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Logo
+        </div>
+
+        <ul class="menu-ul">
+            <li class="close">
+                <i class="fa-solid fa-times"></i>
+            </li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Download</li>
+        </ul>
+
+        <div class="icons">
+            <div class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="bars">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="slider">
+            <div class="slide">
+                <div class="img">
+                    <p>
+                        <span></span>
+                    </p>
+                    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sit atque, repudiandae soluta hic consectetur ipsa error magnam 
+                    adipisci laboriosam debitis!
+                </div>
+            </div>
+            <div class="slide">
+                <div class="img">
+                    <p>
+                        <span></span>
+                    </p>
+                    <img src="https://i.pinimg.com/736x/19/23/99/192399cb5c8a67657e9e48082c87abbd.jpg" alt="">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sit atque, repudiandae soluta hic consectetur ipsa error magnam 
+                    adipisci laboriosam debitis!
+                </div>
+            </div>
+            <div class="slide">
+                <div class="img">
+                    <p>
+                        <span></span>
+                    </p>
+                    <img src="https://img.freepik.com/premium-photo/tree-with-sunset-horizon_662214-92217.jpg" alt="">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sit atque, repudiandae soluta hic consectetur ipsa error magnam 
+                    adipisci laboriosam debitis!
+                </div>
+            </div>
+        </div>
+
+        <div class="facebook">
+
+        </div>
+    </div>
+    <script>
+        document.querySelector(".fa-bars").onclick= () => {
+            document.querySelector(".menu-ul").classList.toggle("active");
+        }
+        document.querySelector(".fa-times").onclick= () => {
+            document.querySelector(".menu-ul").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
