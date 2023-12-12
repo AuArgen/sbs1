@@ -52,10 +52,6 @@ header .icons div:nth-child(3) {
     background: linear-gradient(20deg, rgb(186, 230, 10), rgb(227, 3, 149), rgb(227, 3, 149));
 }
 
-header .icons .bars {
-    display: none;
-}
-
 @keyframes icons {
     0% {
         transform: rotateY(0deg);
