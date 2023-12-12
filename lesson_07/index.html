@@ -84,10 +84,23 @@
         </div>
 
         <div class="facebook">
-
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas voluptatibus reiciendis, laborum, fugit in blanditiis, minima expedita repellat dignissimos quaerat asperiores itaque repudiandae fugiat culpa tempora rem voluptates veritatis vero.
+            <button class="showpre">more</button>
+            <pre class="pre">
+                Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                A distinctio error atque commodi dolorem molestias ex laboriosam
+                 accusamus nisi consectetur aspernatur, in similique provident 
+                 necessitatibus accusantium quos. Modi, vel quisquam?
+            </pre>
         </div>
     </div>
     <script>
+
+        document.querySelector('.showpre').onclick = () => {
+            document.querySelector('.pre').classList.toggle('show')
+        }
+
         document.querySelector(".fa-bars").onclick= () => {
             document.querySelector(".menu-ul").classList.toggle("active");
         }
