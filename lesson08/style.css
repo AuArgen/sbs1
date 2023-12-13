@@ -21,3 +21,15 @@ header i:hover {
 header i.active {
     background: white;
 }
+
+div {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.d i {
+    display: none;
+}
+.d i.active {
+    display: block;
+}

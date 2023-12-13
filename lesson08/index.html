@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Variables</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -17,6 +17,11 @@
     <h1>Javascript</h1>
     <p>User : </p>
 
+    <div class="d">
+        <i class="fa-brands fa-whatsapp i1"></i>
+        <i class="fa-brands fa-instagram i2"></i>
+        <i class="fa-brands fa-facebook i3"></i>
+    </div>
     <script>
         // let a = "123";
         // let b = 123;
@@ -39,16 +44,22 @@
         // document.querySelector("p").innerHTML += a;
         // alert("Thank you "+ a)
         let x = '.fa-whatsapp'
+        let y = '.i1'
         let w = document.querySelector(".fa-whatsapp")
         let i = document.querySelector(".fa-instagram")
         let f = document.querySelector(".fa-facebook")
         document.querySelector(x).classList.toggle("active")
+        document.querySelector(y).classList.toggle("active")
         w.onclick = () => {
             w.classList.toggle("active")
             document.querySelector(x).classList.toggle("active")
             console.log(x)
             x = '.fa-whatsapp'
             console.log(x)
+            document.querySelector(y).classList.toggle("active")
+            y = ".i1"
+            document.querySelector(y).classList.toggle("active")
+
         }
         i.onclick = () => {
             i.classList.toggle("active")
@@ -57,15 +68,20 @@
 
             x = '.fa-instagram'
             console.log(x)
+            document.querySelector(y).classList.toggle("active")
+            y = ".i2"
+            document.querySelector(y).classList.toggle("active")
 
         }
         f.onclick = () => {
             f.classList.toggle("active")
             document.querySelector(x).classList.toggle("active")
             console.log(x)
-
             x = '.fa-facebook'
             console.log(x)
+            document.querySelector(y).classList.toggle("active")
+            y = ".i3"
+            document.querySelector(y).classList.toggle("active")
 
         }
     </script>
