@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Variables</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.css">
+</head>
+<body>
+    <header>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+    </header>
+    <h1>Javascript</h1>
+    <p>User : </p>
+
+    <script>
+        // let a = "123";
+        // let b = 123;
+        // let c = 13
+        // let zamir = true
+        // const NAMESITE = 23434 
+        // console.log(a)
+        // console.log(b)
+        // console.log(a+b)
+        // console.log(typeof(a))
+        // a = "HEllo Argen"
+        // console.log(a)
+        // console.log(typeof(b))
+        // console.log(zamir)
+        // console.log(typeof(zamir))
+        // console.log(NAMESITE)
+        // console.log(typeof(NAMESITE))
+        // console.log(b > c)
+        // a = prompt("Enter your name: ")
+        // document.querySelector("p").innerHTML += a;
+        // alert("Thank you "+ a)
+        let x = '.fa-whatsapp'
+        let w = document.querySelector(".fa-whatsapp")
+        let i = document.querySelector(".fa-instagram")
+        let f = document.querySelector(".fa-facebook")
+        document.querySelector(x).classList.toggle("active")
+        w.onclick = () => {
+            w.classList.toggle("active")
+            document.querySelector(x).classList.toggle("active")
+            console.log(x)
+            x = '.fa-whatsapp'
+            console.log(x)
+        }
+        i.onclick = () => {
+            i.classList.toggle("active")
+            document.querySelector(x).classList.toggle("active")
+            console.log(x)
+
+            x = '.fa-instagram'
+            console.log(x)
+
+        }
+        f.onclick = () => {
+            f.classList.toggle("active")
+            document.querySelector(x).classList.toggle("active")
+            console.log(x)
+
+            x = '.fa-facebook'
+            console.log(x)
+
+        }
+    </script>
+</body>
+</html>
