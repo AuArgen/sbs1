@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: auto 400px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Мен 
+        <span class="famila">
+            Келдибеков 
+        </span>
+        <span class="name">
+            Арген
+        </span>
+        <span class="year">
+            1993
+        </span>
+         - жылдын 
+        <span class="day">
+            16- сентябрь
+        </span>
+        куну туулгам. 
+        <span class="name2">
+            Арген 
+        </span>
+        деп апам койгон. Себеби апамма Арген деген ат жаккан. 
+        <span class="name3">
+            Арген 
+        </span>
+        деген атаммада жаккан.
+        <span class="year2">
+            1993
+        </span> 
+         - жылы аябай сонун жыл болгон.
+        <br>
+        <b>
+            Ээси: 
+        </b> 
+        <span class="famila2">
+            Келдибеков 
+        </span>
+        <span class="name4">
+            Арген
+        </span>
+        <br>
+        <b>
+            Кабыл алынды: 
+        </b>    
+        <span class="famila3">
+            Келдибеков 
+        </span>
+        <span class="name5">
+            Арген
+        </span>
+    </div>
+    <script>
+        let a = prompt("Enter first name: ")
+        document.querySelector(".name").innerHTML = a;
+        document.querySelector(".name2").innerHTML = a;
+        document.querySelector(".name3").innerHTML = a;
+        document.querySelector(".name4").innerHTML = a;
+        document.querySelector(".name5").innerHTML = a;
+        a = prompt("Enter last name: ")
+        document.querySelector(".famila").innerHTML = a;
+        document.querySelector(".famila2").innerHTML = a;
+        document.querySelector(".famila3").innerHTML = a;
+        a = prompt("Enter year: ")
+        document.querySelector(".year").innerHTML = a;
+        document.querySelector(".year2").innerHTML = a;
+        a = prompt("Enter day: ")
+        document.querySelector(".day").innerHTML = a;
+    </script>
+</body>
+</html>

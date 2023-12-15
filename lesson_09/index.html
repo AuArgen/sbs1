@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder=" enter your name">
+    <button>send</button>
+    <h3>
+        Name user: 
+        <span></span>
+    </h3>
+    <h3>
+        Name user: 
+        <span class="name2"></span>
+    </h3>
+
+    <hr>
+
+    <input type="number" class="a" placeholder="number 1">
+    <input type="number" class="b" placeholder="number 2">
+    <button class="btn">Send</button>
+    <p class="result"></p>
+    <p class="result2"></p>
+    <hr>
+    <input type="text" placeholder="comment" class="comment">
+    <button class="btn2">send</button>
+    <div>
+        <h2>Comments:</h2>
+        <hr>
+        <div class="comments_all"></div>
+    </div>
+    <script>
+        document.querySelector("button").onclick = ()=> {
+            let username = document.querySelector("input").value;
+            document.querySelector("span").innerHTML = username;
+            document.querySelector(".name2").textContent = username;
+        }
+        document.querySelector(".btn").onclick = () => {
+            let a = +document.querySelector(".a").value
+            let b = +document.querySelector(".b").value
+            document.querySelector(".result").innerHTML = a + " + " + b + " = " + (a + b)
+            document.querySelector(".result2").innerHTML = a + " % " + b + " = " + (a % b)
+        }
+        let c = 0
+        document.querySelector(".btn2").onclick = () => {
+            let a = document.querySelector(".comment").value
+            document.querySelector(".comment").value = ""
+            c = c + 1
+            document.querySelector(".comments_all").innerHTML += c + ". <i>" + a + "</i><br>" 
+        }
+    </script>
+</body>
+</html>
