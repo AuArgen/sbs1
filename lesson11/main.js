@@ -18,12 +18,38 @@ document.querySelector("button").onclick = () => {
         document.querySelector("button").textContent = 'Play music'
     }
 }
-
+let left = 0;
+let tops = 0;
+let width_body = +document.querySelector('body').offsetWidth
 window.onkeydown = (e) => {
     e = e.key
     if (e >= '1' && e <='8') {
         let a = new Audio(`./mp3/sound${+e+8}.mp3`);
         a.play();
+    }
+    if(e === 'ArrowRight') {
+        if (left >= width_body - 40) left = -10
+        left += 10
+        document.querySelector('p').style.marginLeft = left +'px'; 
+        return 0;
+    }
+    if(e === 'ArrowLeft') {
+        if (left <= 0) {
+            left = width_body - 20
+        }
+        left -= 10
+        document.querySelector('p').style.marginLeft = left +'px'; 
+        return 0;
+    }
+    if(e === 'ArrowUp') {
+        tops += 10
+        document.querySelector('p').style.marginTop = tops +'px'; 
+        return 0;
+    }
+    if(e === 'ArrowDown') {
+        tops -= 10
+        document.querySelector('p').style.marginTop = tops +'px'; 
+        return 0;
     }
     if (e === 'Alt' || e === 'Shift' || e ==='Tab' || e === 'Control' || e === 'CapsLock'){
         return 0;
@@ -37,6 +63,9 @@ window.onkeydown = (e) => {
     else {
         userText += e 
     }
+
+    
+    
 
     div.textContent = userText
 }
