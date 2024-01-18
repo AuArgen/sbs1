@@ -1,0 +1,43 @@
+*{
+    padding:0;
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #eee;
+}
+
+.container {
+    width: 1390px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.container .block {
+    width: 30%;
+    padding: 5px 0;
+    background: #eee;
+    margin: 10px;
+}
+
+.container .block img {
+    width: 100%;
+    height: 250px;
+
+}
+
+.container .block.green {
+    background: yellowgreen;
+}
+
+.container .test label {
+    display: block;
+    margin: 10px;
+}
