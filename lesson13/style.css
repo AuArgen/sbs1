@@ -27,3 +27,29 @@
     background: black;
     color:red;
 }
+
+.chess {
+    width: 320px;
+    margin: 20px auto;
+    border: 1px solid black;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.chess>div {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess .black {
+    background: black;
+}
+
+.chess .white {
+    background: white;
+}

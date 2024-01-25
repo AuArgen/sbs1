@@ -16,7 +16,6 @@ function boe(x) {
     document.getElementById(`block_${x}`).classList.add('active')
 }
 
-
 function myCalc() {
     let v1 = document.querySelector('.num1').value
     let v2 = document.querySelector('.num2').value
@@ -28,3 +27,15 @@ function myCalc() {
     document.querySelector('.result').textContent = ans
 }
 
+
+let chess = document.querySelector('.chess')
+let r = 1
+for(let i = 1; i <= 8; i++) {
+    for (let j = 1; j <= 8; j++) {
+        let class1 = 'white';
+        if ((j + i) % 2 === 0) class1 = 'black'
+        chess.innerHTML += `<div class="${class1}" onclick="alert(${i+j})">${r}</div>`
+        r+=1
+        console.log(`i = ${i}, j = ${j}`)
+    }
+}
