@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+.container {
+    width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .block {
+    width: 250px;
+    min-height: 200px;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.1);
+    margin: 10px 0px;
+    cursor: pointer;
+}
+.container .block img {
+    max-width: 100%;
+    min-height: 200px;
+}
+
+.container .block.active {
+    background: black;
+    color:red;
+}
