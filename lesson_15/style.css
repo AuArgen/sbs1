@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    color:white;
+}
+body {
+    background: black;
+}
+
+button {
+    background: orange;
+}
+
+.blockText {
+    margin: 40px 0px;
+    min-height: 700px;
+    background: black;
+    color:green;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.blockText .text {
+    color:green;
+}
+
+.blockText .line {
+    height: 20px;
+    width: 2px;
+    animation: line 1s ease-in-out infinite;
+    background: white;
+    display: inline-block;
+}
+.blockText .line.active {
+    animation: line 0.1s ease-in-out infinite;
+}
+
+@keyframes line {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
